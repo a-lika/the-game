@@ -1,0 +1,1 @@
+A loading component is a screen that includes a background image, a download animation, and text. The component can take 2 arguments - the execution time (in milliseconds) and the text. You can call it without arguments, then the default parameters will be applied. It can be connected to any project by calling the asynchronous function showLoader() in index.js file.

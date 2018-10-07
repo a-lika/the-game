@@ -1,0 +1,104 @@
+@import '../../sass/variables';
+
+.task-display {
+  margin: 50px auto;
+  padding: 30px;
+  width: 60%;
+  min-width: 900px;
+  min-height: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 3px 1px 20px 15px rgba(180, 200, 255, .8);
+  background: rgba(255, 255, 255, .5);
+}
+
+.task-display > form {
+  padding: 5px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-display > p {
+  font-size: 25px;
+  color: $grey;
+  padding: 30px;
+}
+
+.task-word {
+  width: 95%;
+  height: 200px;
+  border-radius: 8px;
+  background: rgba(180, 200, 255, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  overflow: hidden;
+}
+
+.answer-input {
+  font-family: "Alice";
+  width: 450px;
+  height: 70px;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  background: #ffffff; 
+  outline: none;
+  box-shadow: 1px 1px 5px 5px $pink;
+}
+
+.answer-input:focus {
+  box-shadow: 1px 1px 5px 5px darken($pink, 15%);
+}
+
+.answer-input.correct {
+  box-shadow: 1px 1px 5px 5px darken($green, 10%);
+  @extend .transition;
+}
+
+.answer-input.mistake {
+  box-shadow: 1px 1px 5px 5px darken($red, 10%);
+  @extend .transition;
+}
+
+.message {
+  font-size: 20px;
+  padding: 5px 0 0;
+}
+
+.message.correct {
+  color: darken($green, 10%);
+}
+
+.message.mistake {
+  color: $red; 
+}
+
+.answer-button {
+  font-family: "Alice";
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+  margin: 25px 0;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  border: 1px solid $green;
+  background: $green;
+
+  &:hover, &:focus {
+    background: lighten($green, 10%);
+    @extend .transition;
+  }
+}

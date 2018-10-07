@@ -1,0 +1,36 @@
+@import '../../../../sass/variables';
+
+.sortable-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  min-height: 100px;
+  width: 100%;
+  padding: 0 7px;
+  
+  div {
+    min-width: 30px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: $pink;
+    cursor: move;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &:focus {
+      background: rgba(180, 200, 255, 1);
+      outline: none;
+    }
+  }
+}
+
+.sortable-area > div.correct {
+  background: $green;
+}
+
+.sortable-area > div.mistake {
+  background: lighten($red, 15%);
+}

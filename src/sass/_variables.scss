@@ -1,0 +1,19 @@
+$pink: rgba(248, 200, 226, .9);
+$green: rgba(157, 212, 58, 1);
+$red: rgba(250, 0, 0, 1);
+$grey: rgba(10, 10, 10, .5);
+$yellow: #fbe154;
+
+.transition {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}

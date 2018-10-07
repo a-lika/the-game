@@ -1,0 +1,91 @@
+@import '../../sass/variables';
+
+.wrapper {
+  position: absolute;
+  width: 1000px;
+  height: 700px;
+  margin: 20px auto;
+  top: 50%;
+  margin-top: -360px;
+  left: 50%;
+  margin-left: -500px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .55);
+  box-shadow: 2px 1px 20px 20px rgba(65, 223, 244, .2);
+  color: #ffffff;
+  font: normal 40px "Bonzai";
+  
+  h1 {
+    font-size: 110px;
+    text-shadow: blue 0 0 55px;
+  }
+  
+  p {
+    text-shadow: blue 0 0 55px;
+    font-size: 50px;
+  }
+}
+
+.welcome-form {
+  width: 450px;
+  margin: 0 auto;
+  
+  label {
+    display: block;
+    text-align: right;
+  }
+  
+  input {
+    width: 250px;
+    height: 20px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #cecece;
+    font-size: 16px;
+    padding: 10px 0 10px 10px;
+    outline: none;
+    
+    &:focus {
+    background-color: lighten($green, 20%);
+    }
+  }
+    
+  button {
+    font-size: 20px;
+    width: 180px;
+    height: 50px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    font-weight: 700;
+    @extend .transition;
+  } 
+}
+
+button.start {
+  border: 1px solid $green;
+  background: $green;
+}
+ 
+button.start:hover, button.start:focus {
+  background: darken($green, 10%);
+}
+
+button.register {
+  width: 230px;
+  border: 1px solid $yellow;
+  background: lighten(grey, 40%);
+}
+
+button.register:hover, button.register:focus {
+  background: $yellow;
+}
+
+p.welcome-form-message {
+  font-family: "Alice";
+  font-size: 30px;
+  background-color: lighten($yellow, 10%);
+  color: black;
+  line-height: 45px;
+}

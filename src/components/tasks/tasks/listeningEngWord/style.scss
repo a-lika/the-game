@@ -1,0 +1,14 @@
+@import '../../../../sass/variables';
+
+.play-image {
+  background-image: url('images/play-button-green.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 150px;
+  height: 150px;
+  @extend .transition;
+  
+  &:focus {
+    background-image: url('images/play-button-yellow.png');
+  }
+}

@@ -1,0 +1,26 @@
+@import '../../sass/variables';
+
+.cloud-window {
+  width: 300px;
+  height: 115px;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -150px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background-image: url("images/cloud.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.multiply-sign {
+  padding: 0 15px;
+}
+
+.cloud-monster-info {
+  font-size: 60px;
+  color: darken($red, 10%);
+}

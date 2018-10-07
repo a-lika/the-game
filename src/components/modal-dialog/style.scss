@@ -1,0 +1,244 @@
+@import '../../sass/variables';
+
+.modal-dialog {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-window {
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  background: linear-gradient(to top, rgba(180, 200, 255, .5) 0%, rgba(180, 200, 255, 1) 100%);
+  position: absolute;
+  box-shadow: 1px 1px 25px 35px #fff;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.modal-name {
+  width: 170px;
+  height: 150px;
+  position: absolute;
+  margin-top: 70px;
+  border-radius: 50%;
+  background-color: $yellow;
+  font-size: 22px;
+  box-shadow: 2px 1px 9px 8px $grey;
+  background-image: url('images/hand.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 5;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.modal-name-animation {
+  animation: rotation 1.1s infinite linear; 
+}
+
+@keyframes rotation {
+  0% {transform: rotate(-5deg);}
+  50% {transform: rotate(5deg);}
+  100% {transform: rotate(-5deg);}
+}
+
+.modal-list, .modal-spells-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.modal-list p {
+  font-size: 19px;
+  margin: 0;
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.modal-spells-list p {
+  font-size: 16px;
+}
+
+button {
+  width: inherit;
+  height: inherit;
+  background: none;
+  outline: none;
+  border: none;
+  margin: 0;
+}
+
+.modal-list > div {
+  margin: 70px 50px;
+  cursor: pointer;
+}
+
+.modal-heal-img {
+  background: url(images/heart.png);
+  background-size: 70%;
+}
+
+.modal-attack-img {
+  background: url(images/bomb.png);
+  background-size: contain;
+}
+
+.modal-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 5px solid rgba(25, 25, 25, 1);
+  @extend .transition;
+}
+
+.modal-heal-img, .modal-attack-img {
+  width: 90px;
+  height: 90px;
+  margin: 0;
+  @extend .modal-image;
+}
+
+.modal-heal:hover button.modal-heal-img, 
+button.modal-heal-img:focus, 
+.modal-attack:hover button.modal-attack-img, 
+button.modal-attack-img:focus {
+  background-color: $green;
+}
+
+.modal-settings button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 15px;
+  background-color: #fff;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 2px solid #000;
+  position: absolute;
+  cursor: pointer;
+  margin: 0;
+  @extend .transition;
+}
+
+.modal-settings button:hover, 
+.modal-settings button:focus {
+  background-color: lighten($green, 20%);
+}
+
+.modal-audio {
+  left: 25%;
+  top: 83%;
+  background-image: url("images/volume.png");
+}
+
+.hide-sound {
+  left: 25%;
+  top: 83%;
+  background-image: url("images/no-volume.png");
+}
+
+.modal-cancel {
+  left: 46%;
+  top: 89%;
+  background-image: url("images/button-red.png");
+}
+
+.modal-exit {
+  right: 25%;
+  top: 83%;
+  background-image: url('images/exit.png');
+}
+
+.modal-spells-list > div {
+  position: absolute;
+  width: 107px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-spells-list > div > button {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border: 5px solid rgba(100, 100, 100, .8);
+  margin: 0;
+  @extend .modal-image;
+}
+
+.modal-spells-list p {
+  padding: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, .7);
+  margin: 0;
+}
+
+p.spell-name {
+  color: #000;
+}
+
+p.spell-damage {
+  font-style: italic;
+  color: darken($grey, 50%);
+}
+ 
+.modal-spells-list > div:hover > button,
+.modal-spells-list button:focus {
+  background-color: $green;
+}
+
+.modal-spells-list > div:hover > p,
+.modal-spells-list button:focus ~ p {
+  background-color: lighten($green, 20%);
+  @extend .transition;
+}
+
+.modal-spell-comet {
+  top: 45px;
+  left: 215px;
+}
+
+.modal-spell-cloud {
+  top: 45px;
+  left: 105px;
+}
+
+.modal-spell-laser {
+  top: 120px;
+  left: 12px;
+}
+
+.modal-spell-mystery {
+  top: 120px;
+  right: 12px;
+}
+
+.modal-spell-comet-img {
+  background-image: url("images/comet-preview.png");
+}
+
+.modal-spell-cloud-img {
+  background-image: url("images/poison-preview.png");
+}
+
+.modal-spell-laser-img {
+  background-image: url("images/lazer-preview.png");
+}
+
+.modal-spell-mystery-img {
+  background-image: url("images/mystery-preview.png");
+}

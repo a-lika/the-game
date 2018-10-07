@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'fonts';
+
+html {
+  font-family: "Alice";
+}
+
+body {
+  color: rgba(50, 50, 50, 1);
+  font-size: 23px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-color: #dff;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  @extend .select;
+}
+
+canvas {
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}

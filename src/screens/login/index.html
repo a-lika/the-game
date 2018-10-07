@@ -1,0 +1,12 @@
+<h1>Z-GAME</h1>
+<p>Детская интеллектуальная игра</p>
+<p class= "welcome-form-message" id="form-message"></p>
+<form class="welcome-form" method="POST">
+  <label>Никнейм <input type="text" name="name" maxlength="25" autofocus required /></label>
+  <label>Пароль <input type="password" name="password" maxlength="30" required /></label>
+  <button type="submit" class="start" id="start">Войти</button>
+  <button type="button" class="register" id="register">Зарегистрироваться</button>
+</form> 
+  
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase-firestore.js"></script>
