@@ -106,12 +106,7 @@ const config = {
       new UglifyJsPlugin({
         sourceMap: true,
         uglifyOptions: {
-          compress: true/*{
-            inline: false,
-            warnings: false,
-            drop_console: true,
-            unsafe: true
-          },*/
+          compress: true
         },
       }),
     ],
